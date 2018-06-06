@@ -2,13 +2,15 @@ FROM php:7-alpine
 
 MAINTAINER Yuri Soffner <ysoffner@gmail.com>
 
-ENV PHPCS_VERSION=3.2.3
-
-RUN apk update && apk upgrade && apk add bash
-
-RUN curl -L https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.2.3/phpcs.phar > /usr/local/bin/phpcs \
-    && chmod +x /usr/local/bin/phpcs \
-    && rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
+RUN apk update && apk upgrade && apk add --no-cache bash git openssh bash
+RUN mkdir /phptools/ && cd /phptools/ &&  \
+git clone https://github.com/squizlabs/PHP_CodeSniffer.git phpcs && \
+git clone https://github.com/wimg/PHPCompatibility.git phpcomp && \
+cd phpcs && \
+chmod +x /phptools/phpcs/bin/phpcs && \
+./bin/phpcs --config-set installed_paths ../phpcomp && \
+ln -s /phptools/phpcs/bin/phpcs /usr/local/bin/phpcs && \
+rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
 
 #VOLUME ["/project"]
 WORKDIR /project
