@@ -1,5 +1,6 @@
 [![Layers](https://images.microbadger.com/badges/image/ysoffner/phpsniffer.svg)](https://microbadger.com/images/ysoffner/phpsniffer "Get your own image badge on microbadger.com")
 [![Build Status](https://travis-ci.org/ysoffner/phpSniffer.svg?branch=master)](https://travis-ci.org/ysoffner/phpSniffer)
+[![Version](https://images.microbadger.com/badges/version/ysoffner/phpsniffer.svg)](https://microbadger.com/images/ysoffner/phpsniffer "Get your own version badge on microbadger.com")
 
 ## `Docker hub` links
 https://hub.docker.com/r/ysoffner/phpsniffer/
