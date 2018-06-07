@@ -1,7 +1,7 @@
-[![license](https://img.shields.io/github/license/ysoffner/phpsniffer.svg)]()
-[![Layers](https://images.microbadger.com/badges/image/ysoffner/phpsniffer.svg)](https://microbadger.com/images/ysoffner/phpsniffer "Get your own image badge on microbadger.com")
+[![License](https://img.shields.io/github/license/ysoffner/phpsniffer.svg)]()
 [![Build Status](https://travis-ci.org/ysoffner/phpSniffer.svg?branch=master)](https://travis-ci.org/ysoffner/phpSniffer)
-[![Version](https://images.microbadger.com/badges/version/ysoffner/phpsniffer.svg)](https://microbadger.com/images/ysoffner/phpsniffer "Get your own version badge on microbadger.com")
+[![Version](https://images.microbadger.com/badges/version/ysoffner/phpsniffer.svg)](https://microbadger.com/images/ysoffner/phpsniffer)
+[![Layers](https://images.microbadger.com/badges/image/ysoffner/phpsniffer.svg)](https://microbadger.com/images/ysoffner/phpsniffer)
 
 ## `Docker hub` links
 https://hub.docker.com/r/ysoffner/phpsniffer/
@@ -53,4 +53,4 @@ docker run --rm \
 
 * `/project`: Is your Workdir and PHP project directory.
  
- based from [`herloct/phpcs`](https://github.com/herloct/docker-phpcs)
+ based from [`herloct`](https://github.com/herloct)
