@@ -3,7 +3,6 @@ FROM php:7-alpine
 MAINTAINER Yuri Soffner <ysoffner@gmail.com>
 ENV Version_CodeSniffer 3.3.0
 ENV Version_Compatibility 8.1.0
-#RUN apk update && apk upgrade && apk add --no-cache bash git openssh bash
 
 RUN apk add --no-cache unzip \
 && mkdir /phptools/ && cd /phptools/ \
@@ -15,6 +14,8 @@ RUN apk add --no-cache unzip \
 && /phptools/phpcs/bin/phpcs --config-set installed_paths /phptools/phpcomp \
 && ln -s /phptools/phpcs/bin/phpcs /usr/local/bin/phpcs \
 && rm -rf /var/cache/apk/* /var/tmp/* /tmp/* /phptools/*.zip
+
+COPY php.ini /usr/local/etc/php/php.ini
 
 #VOLUME ["/project"]
 WORKDIR /project
