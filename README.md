@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/ysoffner/phpSniffer.svg?branch=master)](https://travis-ci.org/ysoffner/phpSniffer)
 [![Version](https://images.microbadger.com/badges/version/ysoffner/phpsniffer.svg)](https://microbadger.com/images/ysoffner/phpsniffer)
 [![Layers](https://images.microbadger.com/badges/image/ysoffner/phpsniffer.svg)](https://microbadger.com/images/ysoffner/phpsniffer)
+[![Coverity](https://scan.coverity.com/projects/16037/badge.svg)](https://scan.coverity.com/projects/16037/badge.svg)
 
 ## `Docker hub` links
 https://hub.docker.com/r/ysoffner/phpsniffer/
