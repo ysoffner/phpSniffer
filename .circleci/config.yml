@@ -1,15 +1,10 @@
+version: 2.1
 orbs:
   docker: circleci/docker@1.4.0
-  jobs:
-    lint:
-      executor: docker/machine
-      steps:
-        - checkout
-        - docker/dockerlint:
-            dockerfile: ./
-            treat-warnings-as-errors: true
-version: 2.1
 workflows:
-  lint-dockerfile:
+  lint:
     jobs:
-      - lint
+      - docker/hadolint:
+          dockerfiles: ./
+          ignore-rules: 'DL4005,DL3008'
+          trusted-registries: 'docker.io'
